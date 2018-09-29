@@ -1,0 +1,3 @@
+li {
+    font-size: 1.5em; /* 24px/16px - main list items 24px, nested list items 16px. Divide both measurements to get the "em" measurement */
+}

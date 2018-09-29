@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap.4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 550px;
+        }
+    </style>
+    <title>{Title}</title>
+</head>
+<body>
+    <!-- Tumblr header -->
+        <nav class="navbar fixed-top navbardark bg-dark"><a class="navbard-brand" href="#">{title}</a></nav>
+        <div class="container">
+            <!-- Tumblr posts block -->
+            {block:Posts}
+                {block:Text}
+                    <h2>{Title}</h2>
+                    <p>{Body}</p>
+                {/block:Text}
+                {block:Photo}
+                    <div class="card">
+                        <img class="card-img-top" src="{PhotoURL-500}" alt="{PhotoAlt}">
+                        <div class="card-body">
+                            <h5 class="card-title">{Caption}</h5>
+                        </div>
+                    </div>
+                {/block:Photo}
+                {block:Quote}
+                    <blockquote class="blockquote">
+                        <p>{Quote}</p>
+                        <footer class="blockquote-footer">{Source}</footer>
+                    </blockquote>
+                {/block:Quote}
+            {/block:Posts}
+            <p class="text-center">
+                {block:PreviousPage}
+                    <a href="{PreviousPage}" class=" btn btn-secondary">Previous</a>
+                {/block:PreviousPage}
+                {block:NextPage}
+                    <a href="{NextPage" class="btn btn-secondary">Next</a>
+                {/block:NextPage}
+            </p>
+        </div>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap.4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
